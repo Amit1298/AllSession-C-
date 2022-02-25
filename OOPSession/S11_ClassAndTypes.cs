@@ -70,5 +70,31 @@ namespace OOPSession
                     Console.WriteLine($"\n***********Student Details are: ***************\n Student Name: {this.firstName}\nStudent Age: {this.age}\n Student Gender: {this.gender}\nStudent Phone: {this.phoneNumber}");
                 }
             }
+
+             //sealed Class
+        sealed class BaseClass
+        {
+            static int num1, num2;
+            public static void Sealed_Data()
+            {
+                Console.WriteLine($"Addition is : {num1 + num2}");
+            }
+        }
+        public class DerivedClass
+        {
+            public void Sealed_DerivedDate()
+            {
+                BaseClass.Sealed_Data();
+            }
+        }
+        public static class StaticClass
+        {
+            static int numbers = 30;
+            public static void static_Method()
+            {
+                int nums = StaticClass.numbers;
+                Console.WriteLine("Value is : "+ nums);
+            }
+        }
     }
 }
